@@ -13,16 +13,4 @@ describe Gameable::Die do
       expect(die.roll).to be <= side_count
     end
   end
-
-  describe 'its randomness' do
-    it 'is so fucking random' do
-      results = Hash.new(0)
-
-      100000.times do
-        results[die.roll] += 1
-      end
-
-      binding.pry
-    end
-  end
 end
